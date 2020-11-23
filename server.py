@@ -5,6 +5,7 @@ from flask import Flask, \
         render_template
 
 from pathlib import Path
+from . import config
 
 app = Flask(__name__)
 
@@ -12,7 +13,7 @@ app = Flask(__name__)
 @app.route("/index.html")
 @app.route("/")
 def index():
-    return render_template("index.html", title="fucka you")
+    return render_template("index.html", **config.index_config)
 
 
 @app.route("/<path:path>")

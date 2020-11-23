@@ -1,0 +1,19 @@
+from dataclasses import dataclass
+
+@dataclass
+class IntroSection:
+    title: str
+    content: str = "..."
+
+
+
+index_config = dict(
+        title="Blake Smith",
+        section_names=["Home", "Placeholder1", "Placeholder2"],
+        intro=[
+            IntroSection("Fast"),
+            IntroSection("Effective"),
+            IntroSection("Pretty Good Cook"),
+        ],
+        logo="Blake Anthony Smith",
+)
